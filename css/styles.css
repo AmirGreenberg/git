@@ -6,11 +6,23 @@ h1 {
     color: white;
 }
 
-div {
+.ball1 {
     border-radius: 50%;
     width: 100px;
     height: 100px;
     background: blue;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    transition: 1s;
+}
+
+.ball2{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: yellow;
     margin: 0 auto;
     text-align: center;
     font-size: 22px;
