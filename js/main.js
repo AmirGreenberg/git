@@ -4,6 +4,7 @@ function onBallClick(elBall) {
     if (!elBall.style.width) {
         var css = getComputedStyle(elBall)
         var ballSize = css.width.replace(/\D/g, '')
+             
     } else{
         var ballSize = elBall.style.width.replace(/\D/g, '')
     }
@@ -17,6 +18,5 @@ function onBallClick(elBall) {
     }
 
     elBall.innerText = elBall.style.width
-    console.log('check: ', check)
-    
+    elBall.style.background = getRandomColor()
 }
