@@ -1,16 +1,20 @@
 'use strict'
 
 function onBallClick(elBall) {
-    var css = getComputedStyle(elBall)
-    var cssWidth = parseInt(css.width, 10)
-    var cssHeight = css.height.match(/(\d+)/)[0]
+    if (!elBall.style.width) {
+        var css = getComputedStyle(elBall)
+        var ballSize = css.width.replace(/\D/g, '')
+    } else{
+        var ballSize = elBall.style.width.replace(/\D/g, '')
+    }
 
-    if (cssWidth < 400) {
-        elBall.style.width = +cssWidth + 50 + 'px'
-        elBall.style.height = +cssHeight + 50 + 'px'
+    if (ballSize < 400) {
+        elBall.style.width = +ballSize + 50 + 'px'
+        elBall.style.height = +ballSize + 50 + 'px'
     } else {
         elBall.style.width = '100px'
         elBall.style.height = '100px'
     }
-elBall.innerText = parseInt(elBall.style.width, 10)
+
+    elBall.innerText = elBall.style.width
 }
