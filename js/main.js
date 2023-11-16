@@ -17,4 +17,6 @@ function onBallClick(elBall) {
     }
 
     elBall.innerText = elBall.style.width
+    console.log('check: ', check)
+    
 }
